@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="lives">Lives: <span id="lives">3</span></div>
+            <div class="high-score">High Score: <span id="high-score">0</span></div>
+        </div>
+        
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+        
+        <div class="game-over" id="gameOver" style="display: none;">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+        
+        <div class="level-complete" id="levelComplete" style="display: none;">
+            <h2>Level Complete!</h2>
+            <p>Score: <span id="levelScore">0</span></p>
+            <button onclick="nextLevel()">Next Level</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <p>Use ARROW KEYS or WASD to move Pacman</p>
+            <p>Eat all dots to win the level</p>
+            <p>Avoid the red, orange, and green ghosts!</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
